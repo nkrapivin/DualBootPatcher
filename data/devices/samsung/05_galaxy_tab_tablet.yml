@@ -715,3 +715,44 @@
     default_brightness: 180
     theme: portrait_hdpi
     
+- name: Samsung Galaxy Tab E
+  id: gtel3g
+  codenames:
+    - gtel3g
+    - SM-T561
+    - gtelwifi
+    - SM-T560
+  architecture: armeabi-v7a
+
+  block_devs:
+    base_dirs:
+      - /dev/block/platform/sprd-sdhci.3/by-name
+    system:
+      - /dev/block/platform/sprd-sdhci.3/by-name/SYSTEM
+      - /dev/block/mmcblk0p23
+    cache:
+      - /dev/block/platform/sprd-sdhci.3/by-name/CSC
+      - /dev/block/mmcblk0p22
+    data:
+      - /dev/block/platform/sprd-sdhci.3/by-name/userdata
+      - /dev/block/mmcblk0p26
+    boot:
+      - /dev/block/platform/sprd-sdhci.3/by-name/KERNEL
+      - /dev/block/mmcblk0p20
+    recovery:
+      - /dev/block/platform/sprd-sdhci.3/by-name/RECOVERY
+      - /dev/block/mmcblk0p21
+
+  boot_ui:
+    supported: true
+    flags:
+      - TW_HAS_DOWNLOAD_MODE
+      - TW_SCREEN_BLANK_ON_BOOT
+      - TW_GRAPHICS_FORCE_USE_LINELENGTH
+    graphics_backends:
+      - fbdev
+    pixel_format: RGBX_8888
+    brightness_path: /sys/class/backlight/panel/brightness
+    default_brightness: 255
+    theme: portrait_hdpi
+    
