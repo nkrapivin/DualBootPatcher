@@ -13,6 +13,7 @@ before_install:
   - cd data/devices/samsung
   - wget https://raw.githubusercontent.com/nkrapivin/DualBootPatcher/593bd408371b03847dc69ecd45d6a91f4f8ff8f7/data/devices/samsung/05_galaxy_tab_tablet.yml
   - cd ../../../../
+  - pwd
   # Pull docker images
   - docker pull yshalsager/dualbootpatcher:9.3.0-6-base
   - docker pull yshalsager/dualbootpatcher:9.3.0-6-android
